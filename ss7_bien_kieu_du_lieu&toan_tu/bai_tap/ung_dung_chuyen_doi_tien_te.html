@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<form>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Curency</th>
+            <th>To Currency</th>
+        </tr>
+        <td>
+            <input type="text" id="sotienvietnam">
+        </td>
+        <td>
+            <select>
+                <option value="VietNam">VietNam</option>
+            </select>
+        </td>
+        <td>
+            <select>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <button type="button" onclick="Doitien()">Convert</button>
+        </td>
+    </table>
+</form>
+<h4 id="ketqua"></h4>
+<script>
+    function Doitien() {
+        const TYGIADOLA = 23000
+        let VND = document.getElementById("sotienvietnam").value;
+        let tienDo = VND * TYGIADOLA;
+        document.getElementById("ketqua").innerHTML ="Result:"+tienDo+"VND"
+    }
+</script>
 </body>
 </html>

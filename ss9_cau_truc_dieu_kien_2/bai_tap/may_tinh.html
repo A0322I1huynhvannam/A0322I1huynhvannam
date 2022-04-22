@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="border: 1px solid black  ; text-align:center ; width: 20px ; height: 45px;background-color:coral    " >
+    <tr>
+        <td colspan="4"; height="30px"; style="border: 1px solid black ; background-color: orangered ">
+            <p id="result"></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="calBasic('1')">1</button>
+        </td>
+        <td>
+            <button onclick="calBasic('2')">2</button>
+        </td>
+        <td>
+            <button onclick="calBasic('3')">3</button>
+        </td>
+        <td>
+            <button onclick="calBasic('+')">+</button>
+        </td>
+        </table>
+        <table>
+        <td>
+            <button onclick="calBasic('4')">4</button>
+        </td>
+        <td>
+            <button onclick="calBasic('5')">5</button>
+        </td>
+        <td>
+            <button onclick="calBasic('6')">6</button>
+        </td>
+        <td>
+            <button onclick="calBasic('-')">-</button>
+        </td>
+        </table>
+<table>
+    <td>
+        <button onclick="calBasic('7')">7</button>
+    </td>
+    <td>
+        <button onclick="calBasic('8')">8</button>
+    </td>
+    <td>
+        <button onclick="calBasic('9')">9</button>
+    </td>
+    <td>
+        <button onclick="calBasic('*')">*</button>
+    </td>
+    </table>
+
+    <table>
+        <td>
+            <button onclick="cal_Basic()">c</button>
+        </td>
+        <td>
+            <button onclick="calBasic('0')">0</button>
+        </td>
+        <td>
+        <button onclick="calBasic('=')">=</button>
+    </td>
+    <td>
+        <button onclick="calBasic('/')">/</button>
+    </td>
+</table>
+<script>
+    function calBasic(x) {
+        let value = document.getElementById("result").innerText;
+        switch (x) {
+            case "1":
+            case "2":
+            case "3":
+            case "+":
+            case "4":
+            case "5":
+            case "6":
+            case "-":
+            case "7":
+            case "8":
+            case "9":
+            case "*":
+            case "/":
+            case "0":
+
+                value = value + x;
+                break;
+            case "=":
+                value = eval(value);
+                break
+        }
+        document.getElementById("result").innerText = value;
+    }
+    function cal_Basic() {
+        document.getElementById("result").innerText ="";
+
+    }
+</script>
+</body>
+</html>

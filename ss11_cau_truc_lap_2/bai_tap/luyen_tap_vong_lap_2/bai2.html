@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let n=parseInt(prompt("Nhập vào N: ") )
+    let i;
+    let giai_thua = 1;
+
+    for (i = 2; i <= n; i++) {
+        giai_thua = giai_thua* i;
+        document.write("N! =" +giai_thua+"</br>")
+    }
+</script>
 </body>
 </html>

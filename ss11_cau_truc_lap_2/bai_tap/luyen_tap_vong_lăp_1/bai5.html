@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let f = 0 , f1= 1,f2,i,f3;
+    let a=parseInt(prompt("nhập vào số n:") )
+    for(i=0;i<a;i++){
+        f2=f+f1
+        f=f1
+        f1=f2
+        document.write("Dãy số fibonacci là:"+f2+"<br>")
+    }
+    f3=f+f1+f2
+    document.write("Tổng số nguyên tố là:"+f3)
+</script>
 </body>
 </html>

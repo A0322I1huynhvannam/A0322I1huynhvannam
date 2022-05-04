@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let i,k;
+    let n=parseInt(prompt("Nhập cạnh góc vuông:") )
+    for(;n<=0;){
+        let n=parseInt(prompt("Nhập cạnh góc vuông lon hơn không:") )
+    }
+    for( i = 1; i <= n; i++)
+    {
+        for( k = 1; k <= i; k++){
+        document.write("*")
+        }  document.write("</br>")
+    }
+</script>
 </body>
 </html>

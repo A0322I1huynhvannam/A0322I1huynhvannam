@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let i,k;
+   let n=parseInt(prompt("Nhập chiều dài") )
+    let m=parseInt(prompt("Nhập chiều rộng") )
+    for(;n<=0||m<=0;){
+        if(n<=0){
+           let n=parseInt(prompt("Nhập lại chiều dài") )
+        }
+        if(m<=0){
+          let m=parseInt(prompt("Nhập lại chiều rộng") )
+        }
+
+    }
+    for(i = 1; i <= n; i++)    {
+        for( k = 1 ; k <= m; k++) {
+            if (i==1 || k==1 || i==n || k==m){
+                document.write("*")
+            }
+            else {
+                document.write("&nbsp&nbsp")
+            }
+        }
+        document.write("</br>")
+    }
+
+</script>
 </body>
 </html>

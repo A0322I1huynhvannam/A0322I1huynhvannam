@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h2>Kiểm Tra Số Nguyên Tố</h2>
+<input type="text " id="nhapso"  >
+<input type="button" value="Hãy Bấm Vào Đây để Kiểm Tra Nhé" onclick="songuyento()"  >
+<script>
+    function isPrime(number){
+        if(number<1) return false
+        else if(number ==2 || number ==3) return true
+        else if(number %2 ==0) return false
+        else{
+            for(i=3;i<number;i+=2){
+                if(number % i== 0){
+                    return false
+                }
+
+
+            }
+        }
+        return true
+    }
+    function songuyento() {
+        let nam=document.getElementById("nhapso")
+        let kiemtra = isPrime(nam.value)
+        if(kiemtra){
+            alert(nam.value+ "Đây là số nguyên tố bạn nhé :)")
+        } else{
+            alert(nam.value+ "Đây không phải là số nguyên tố:<>:")
+        }
+
+    }
+
+
+
+</script>
 </body>
 </html>

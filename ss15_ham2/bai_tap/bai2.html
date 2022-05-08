@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h2>Chuyển Đổi Giữa Fett và Meters</h2>
+<input type="text" id="nhapso" >
+<select id="chon">
+    <option value="fett">fett</option>
+    <option value="meters">meters</option>
+</select>
+<input type="button" value="Quy Đổi" onclick="chuyendoi()"  >
+<p id="ketqua" ></p>
+<script>
+    function chuyendoi() {
+        let chonso =document.getElementById("chon")
+        let nhapso=document.getElementById("nhapso")
+        let ketqua=0
+        if(chonso.value="feet"){
+            ketqua = vannam(nhapso.value)
+            document.getElementById("ketqua").innerHTML ="kết quả "+ketqua +"feet"
+        } else {
+            ketqua = vannam1(nhapso.value)
+            document.getElementById("ketqua").innerHTML ="kết quả" +ketqua +"meters"
+
+        }
+        function vannam(meters) {
+            let meter=0.305*foot
+            return meter
+        }
+        function vannam1(feet) {
+            let foot=3.279*meter
+            return foot
+
+        }
+
+    }
+</script>
 </body>
 </html>

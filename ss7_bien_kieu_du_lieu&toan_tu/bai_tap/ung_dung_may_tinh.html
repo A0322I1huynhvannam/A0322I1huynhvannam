@@ -5,40 +5,41 @@
     <title>Title</title>
 </head>
 <body>
+<h1>Caculator</h1>
 <form>
-    <input type="text" id="giatri1">
-    <input type="text" id="giatri2"><br><br>
-    <input type="button" onclick="phepcong()" value=Addition(+)>
-    <input type="button" onclick="pheptru()" value=Subtraction(-)>
-    <input type="button" onclick="phepnhan()" value=Multiplicatio(X)>
-    <input type="button" onclick="phepchia()" value=Divison(/)>
+    <input type="text" id="giatri">
+    <input type="text" id="giatri1"><br><br>
+    <input type="button" onclick ="phepcong()" value="Addition (+)">
+    <input type="button" onclick ="pheptru()" value="Subtraction(-)">
+    <input type="button" onclick ="phepnhan()" value="Multiplication(*)">
+    <input type="button" onclick ="phepchia()" value="Division(/)">
 </form>
-<p>Kết quả là: <span id="ketqua"></span></p>
+<p>Result Division: <span id="ketqua"> </span> </p>
 </body>
 <script>
     function phepcong(){
-        let so1=+document.getElementById("giatri1").value;
-        let so2=+document.getElementById("giatri2").value;
-        let tong=so1+so2;
-        document.getElementById("ketqua").innerHTML=tong
+        let so1= document.getElementById("giatri").value
+        let so2= document.getElementById ("giatri1").value
+        let tong =Number(so1)+Number(so2);
+        document.getElementById("ketqua").innerHTML= tong
     }
     function pheptru(){
-        let so1=document.getElementById("giatri1").value;
-        let so2=document.getElementById("giatri2").value
-        let hieu=so1-so2;
+        let so1= document.getElementById ("giatri").value
+        let so2= document.getElementById ("giatri1").value
+        let hieu = Number(so1)-Number(so2)
         document.getElementById("ketqua").innerHTML=hieu
     }
     function phepnhan(){
-        let so1=document.getElementById("giatri1").value;
-        let so2=document.getElementById("giatri2").value
-        let tich=so1*so2;
+        let so1= document.getElementById ("giatri").value
+        let so2= document.getElementById ("giatri1").value
+        let tich =Number(so1)*Number(so2)
         document.getElementById("ketqua").innerHTML=tich
     }
-    function phepchia(){
-        let so1=document.getElementById("giatri1").value;
-        let so2=document.getElementById("giatri2").value
-        let thuong=so1/so2;
-        document.getElementById("ketqua").innerHTML=thuong
+    function phepchia() {
+        let so1 = document.getElementById("giatri").value
+        let so2 = document.getElementById("giatri1").value
+        let thuong = Number(so1) / Number(so2)
+        document.getElementById("ketqua").innerHTML = thuong
     }
 </script>
 </body>

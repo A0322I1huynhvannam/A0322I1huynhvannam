@@ -5,6 +5,32 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+   function nam() {
+       let mang=["a","a","b","c","s","w",""]
+       let kytu=prompt("Nhập vào ký tự tại đây nhé :")
+       document.write("Mảng Gồm : "+mang+"</br>")
+       let kiemtra=kiemtracuamang(mang,kytu)
+       if(kiemtra>0){
+           document.write("Có " +kiemtra+ "ký tự  " +kytu + " trong mảng")
+       } else {
+           document.write("Không có ký tự nào ở đây hết bé ơi")
+       }
+function kiemtracuamang(mang,kytu) {
+           let dem=0
+    for(let i=0;i<mang.length;i++){
+        if(kytu==mang[i]){
+            dem ++
+        }
 
+    } if( dem>0){
+        return dem
+    }
+    return -1
+}
+
+}
+nam()
+</script>
 </body>
 </html>

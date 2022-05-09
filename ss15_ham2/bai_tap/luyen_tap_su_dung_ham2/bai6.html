@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTra(i) {
+        if(i%2 ==0 || i%2 == 1){
+            return true
+        }
+        return false
+    }
+    function nam() {
+        let i = prompt("Nhập vào ")
+        let check = kiemTra(i)
+        if(check){
+            alert("Đây là số nguyên dương")
+        }else{
+            alert("Đây là số nguyên âm")
+        }
+    }
+    nam()
+</script>
+</body>
+</html>

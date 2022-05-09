@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function ngoisao(sao) {
+    let sao1=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair","Dubhe" ,"Regulus"]
+        let sao2=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" , "Leo"]
+        for(let i=0;i<sao.length;i++ ){
+            if(sao==sao1[i]){
+                return  sao2[i]
+
+            }
+
+        }
+        return ""
+     }
+
+     function nam() {
+        let timkiem=prompt("Nhập tên ngôi sao :")
+         let sao=ngoisao(timkiem)
+         if (sao == ""){
+             alert("Không có ngôi sao cần tìm")
+         } else {
+             alert("Ngôi sao cần tìm "+timkiem+" là :" +sao)
+         }
+
+     }
+     nam()
+</script>
+</body>
+</html>
